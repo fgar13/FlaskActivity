@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% block content %}
+<h1>Student Details</h1>
+<table style="width:100%">
+    <tr>
+        <th>Name</th>
+        <th>Organisation</th>
+    </tr>
+    {%for key,value in studentOrganisationDetails.items()%}
+        <tr>
+            <td style="text-align: center">{{key}}</td>
+            <td style="text-align: center">{{value}}</td>
+        </tr>
+    {%endfor%}
+</table>
+
+{% endblock %}

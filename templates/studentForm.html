@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% block content %}
+<h1>Register</h1>
+<h4>Enter Student Information below</h4>
+<!--Form to request user's name-->
+<form action="/addStudentOrganisation" method="POST">
+    <label>Enter name: </label>
+    <input type="text" name="name">
+    <label>Enter organisation: </label>
+    <!-- <input type="text" name="organisation"> -->
+    <select name="organisation">
+        <option value="Charlotte_Hack">Charlotte Hack</option>
+        <option value="Code_9">Code 9</option>
+        <option value="Women_who_codes">Women who codes</option>
+        <option value="Runtime_Terror">Code 9</option>
+        <option value="FrontPage_Freebirds">FrontPage Freebirds</option>
+    </select>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

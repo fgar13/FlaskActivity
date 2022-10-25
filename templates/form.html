@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% block content %}
+<h1>Home</h1>
+<!--<br>-->
+<h2>Enter an integer</h2>
+<form action="/calculate" method="POST">
+    <label>Enter Number: </label>
+    <input type="text" name="number">
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
